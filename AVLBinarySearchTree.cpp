@@ -104,6 +104,9 @@ TreeNode *AVLBinarySearchTree::addItem(int newValue, TreeNode *node)
 
 TreeNode *AVLBinarySearchTree::leftRotate(TreeNode *node)
 {
+	if (node == nullptr || node->getRightNode() == nullptr)
+		return node;
+
     TreeNode *right = node->getRightNode();
     TreeNode *leftChildOfRight = right->getLeftNode();
 
@@ -118,6 +121,9 @@ TreeNode *AVLBinarySearchTree::leftRotate(TreeNode *node)
 
 TreeNode *AVLBinarySearchTree::rightRotate(TreeNode *node)
 {
+	if (node == nullptr || node->getLeftNode() == nullptr)
+		return node;
+
     TreeNode *left = node->getLeftNode();
     TreeNode *rightChildOfLeft = left->getRightNode();
 
@@ -141,9 +147,15 @@ TreeNode *AVLBinarySearchTree::getMinNode(TreeNode *node)
         return node;
     return getMinNode(node->getLeftNode());
 }
-// Finish
+
 TreeNode *AVLBinarySearchTree::deleteItem(int valueToDelete, TreeNode *node)
 {
+	if (isEmpty())
+	{
+		cout << "Tree is empty. Cannot delete the item.\n";
+		return nullptr;
+	}
+
     if (node == nullptr)
     {
         return node;
