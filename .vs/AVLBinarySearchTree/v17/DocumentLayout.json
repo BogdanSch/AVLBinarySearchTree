@@ -3,20 +3,24 @@
   "WorkspaceRootPath": "D:\\Cources Studying\\Nure\\Nure-Algorithms\\Labwork-2\\AVLBinarySearchTree\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{DB043895-210E-4A9F-BE12-E14CD86CFC63}|AVLBinarySearchTree.vcxproj|D:\\Cources Studying\\Nure\\Nure-Algorithms\\Labwork-2\\AVLBinarySearchTree\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{DB043895-210E-4A9F-BE12-E14CD86CFC63}|AVLBinarySearchTree.vcxproj|solutionrelative:main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DB043895-210E-4A9F-BE12-E14CD86CFC63}|AVLBinarySearchTree.vcxproj|D:\\Cources Studying\\Nure\\Nure-Algorithms\\Labwork-2\\AVLBinarySearchTree\\TreeNode.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{DB043895-210E-4A9F-BE12-E14CD86CFC63}|AVLBinarySearchTree.vcxproj|solutionrelative:TreeNode.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{DB043895-210E-4A9F-BE12-E14CD86CFC63}|AVLBinarySearchTree.vcxproj|D:\\Cources Studying\\Nure\\Nure-Algorithms\\Labwork-2\\AVLBinarySearchTree\\AVLBinarySearchTree.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{DB043895-210E-4A9F-BE12-E14CD86CFC63}|AVLBinarySearchTree.vcxproj|solutionrelative:AVLBinarySearchTree.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{DB043895-210E-4A9F-BE12-E14CD86CFC63}|AVLBinarySearchTree.vcxproj|D:\\Cources Studying\\Nure\\Nure-Algorithms\\Labwork-2\\AVLBinarySearchTree\\AVLBinarySearchTree.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{DB043895-210E-4A9F-BE12-E14CD86CFC63}|AVLBinarySearchTree.vcxproj|solutionrelative:AVLBinarySearchTree.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB043895-210E-4A9F-BE12-E14CD86CFC63}|AVLBinarySearchTree.vcxproj|D:\\Cources Studying\\Nure\\Nure-Algorithms\\Labwork-2\\AVLBinarySearchTree\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{DB043895-210E-4A9F-BE12-E14CD86CFC63}|AVLBinarySearchTree.vcxproj|solutionrelative:main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{DB043895-210E-4A9F-BE12-E14CD86CFC63}|AVLBinarySearchTree.vcxproj|D:\\Cources Studying\\Nure\\Nure-Algorithms\\Labwork-2\\AVLBinarySearchTree\\TreeNode.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{DB043895-210E-4A9F-BE12-E14CD86CFC63}|AVLBinarySearchTree.vcxproj|solutionrelative:TreeNode.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB043895-210E-4A9F-BE12-E14CD86CFC63}|AVLBinarySearchTree.vcxproj|D:\\Cources Studying\\Nure\\Nure-Algorithms\\Labwork-2\\AVLBinarySearchTree\\TreeNode.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{DB043895-210E-4A9F-BE12-E14CD86CFC63}|AVLBinarySearchTree.vcxproj|solutionrelative:TreeNode.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,17 +30,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "main.cpp",
               "DocumentMoniker": "D:\\Cources Studying\\Nure\\Nure-Algorithms\\Labwork-2\\AVLBinarySearchTree\\main.cpp",
               "RelativeDocumentMoniker": "main.cpp",
               "ToolTip": "D:\\Cources Studying\\Nure\\Nure-Algorithms\\Labwork-2\\AVLBinarySearchTree\\main.cpp",
               "RelativeToolTip": "main.cpp",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABMAAAAAAAAAAAAAwCsAAABEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-04-05T17:21:27.852Z",
               "IsPinned": true,
@@ -44,16 +48,29 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "AVLBinarySearchTree.cpp",
               "DocumentMoniker": "D:\\Cources Studying\\Nure\\Nure-Algorithms\\Labwork-2\\AVLBinarySearchTree\\AVLBinarySearchTree.cpp",
               "RelativeDocumentMoniker": "AVLBinarySearchTree.cpp",
               "ToolTip": "D:\\Cources Studying\\Nure\\Nure-Algorithms\\Labwork-2\\AVLBinarySearchTree\\AVLBinarySearchTree.cpp",
               "RelativeToolTip": "AVLBinarySearchTree.cpp",
-              "ViewState": "AgIAAIkAAAAAAAAAAAAAwJoAAAAsAAAAAAAAAA==",
+              "ViewState": "AgIAAO8AAAAAAAAAAAAAAAABAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-04-05T17:24:22.419Z",
               "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AVLBinarySearchTree.h",
+              "DocumentMoniker": "D:\\Cources Studying\\Nure\\Nure-Algorithms\\Labwork-2\\AVLBinarySearchTree\\AVLBinarySearchTree.h",
+              "RelativeDocumentMoniker": "AVLBinarySearchTree.h",
+              "ToolTip": "D:\\Cources Studying\\Nure\\Nure-Algorithms\\Labwork-2\\AVLBinarySearchTree\\AVLBinarySearchTree.h",
+              "RelativeToolTip": "AVLBinarySearchTree.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-04-08T04:51:01.061Z",
               "EditorCaption": ""
             },
             {
@@ -71,7 +88,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "TreeNode.h",
               "DocumentMoniker": "D:\\Cources Studying\\Nure\\Nure-Algorithms\\Labwork-2\\AVLBinarySearchTree\\TreeNode.h",
               "RelativeDocumentMoniker": "TreeNode.h",

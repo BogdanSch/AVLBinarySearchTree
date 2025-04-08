@@ -25,7 +25,7 @@ int AVLBinarySearchTree::getBalanceFactor(TreeNode *node)
 
 void AVLBinarySearchTree::destroyRecursive(TreeNode *node)
 {
-    if (node)
+    if (node != nullptr)
     {
         destroyRecursive(node->getLeftNode());
         destroyRecursive(node->getRightNode());
@@ -68,12 +68,10 @@ TreeNode *AVLBinarySearchTree::addItem(int newValue, TreeNode *node)
     }
     else if (newValue < node->getValue())
     {
-        // left sub-tree
         node->setLeftTreeNode(addItem(newValue, node->getLeftNode()));
     }
     else
     {
-        // right sub-tree
         node->setRightTreeNode(addItem(newValue, node->getRightNode()));
     }
 
@@ -190,7 +188,7 @@ TreeNode *AVLBinarySearchTree::deleteItem(int valueToDelete, TreeNode *node)
         node->setRightTreeNode(deleteItem(temp->getValue(), temp->getRightNode()));
     }
 
-    node->setHeight(1 + max(retrieveHeight(node->getLeftNode()), retrieveHeight(node->getRightNode())));
+    node->setHeight(max(retrieveHeight(node->getLeftNode()), retrieveHeight(node->getRightNode())) + 1);
     int balanceFactor = getBalanceFactor(node);
 
     if (balanceFactor > 1 && getBalanceFactor(node->getLeftNode()) >= 0)
@@ -220,7 +218,6 @@ void AVLBinarySearchTree::deleteItem(int valueToDelete)
     root = deleteItem(valueToDelete, root);
 }
 
-// O(log[n])
 TreeNode *AVLBinarySearchTree::search(int value)
 {
     TreeNode *currentNode = root;
@@ -238,6 +235,31 @@ TreeNode *AVLBinarySearchTree::search(int value)
     }
 
     return currentNode;
+}
+
+TreeNode* AVLBinarySearchTree::mirror(TreeNode* node)
+{
+	if (node == nullptr)
+		return nullptr;
+
+	TreeNode* mirroredNode = new TreeNode(node->getValue());
+	mirroredNode->setHeight(node->getHeight());
+
+	mirroredNode->setLeftTreeNode(mirror(node->getRightNode()));
+	mirroredNode->setRightTreeNode(mirror(node->getLeftNode()));
+
+    return mirroredNode;
+}
+
+AVLBinarySearchTree* AVLBinarySearchTree::symmetricalBBST()
+{
+	if (isEmpty())
+	{
+		cout << "Tree is empty. Cannot create a symmetrical BBST.\n";
+		return nullptr;
+	}
+    AVLBinarySearchTree* symmetricalTree = new AVLBinarySearchTree(mirror(root));
+    return symmetricalTree;
 }
 
 void AVLBinarySearchTree::printPreorder()
