@@ -4,7 +4,7 @@ class TreeNode
 public:
 	TreeNode(int value) { this->value = value; right = left = nullptr; }
 	int getValue() const { return value; }
-	void setValue(int newValue) { value = newValue; }
+	void setValue(int newValue) { this->value = newValue; }
 	int getHeight() const { return height; }
 	void setHeight(int newHeight) { height = newHeight; }
 	TreeNode* getRightNode() const { return right; }

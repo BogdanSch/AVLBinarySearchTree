@@ -24,22 +24,19 @@ int main()
 	tree.addItem(11);
 	tree.addItem(9);
 	printTree(tree);
-	cout << "\nDeleting 9:\n";
+	cout << "\n";
+
+	cout << "Deleting 9:\n";
 	tree.deleteItem(9);
 	printTree(tree);
 	cout << "Is tree full? " << (tree.isFull() ? "Yes" : "No") << "\n";
-
-	/*cout << "\n";
-	cout << "Deleting all the items and adding 120: \n";
-    tree.deleteItem(12);
-    tree.deleteItem(6);
-    tree.deleteItem(10);
-	tree.deleteItem(11);
-    tree.deleteItem(8);
-    tree.addItem(120);*/
 	cout << "\n";
+
 	cout << "Creating the mirror of the tree:\n";
 	AVLBinarySearchTree* mirroredTree = tree.symmetricalBBST();
 	printTree(*mirroredTree);
 	cout << "Is tree full? " << (tree.isFull() ? "Yes" : "No") << "\n";
+	cout << "\n";
+
+	cout << "Are threes equal? " << (tree.isEqual(*mirroredTree) ? "Yes" : "No") << "\n";
 }

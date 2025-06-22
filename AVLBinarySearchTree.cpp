@@ -33,7 +33,7 @@ void AVLBinarySearchTree::destroyRecursive(TreeNode *node)
     }
 }
 
-bool AVLBinarySearchTree::isEmpty()
+bool AVLBinarySearchTree::isEmpty() const
 {
     return root == nullptr;
 }
@@ -62,7 +62,7 @@ TreeNode *AVLBinarySearchTree::addItem(int newValue, TreeNode *node)
         size++;
         return new TreeNode(newValue);
     }
-    else if (node->getValue() == newValue)
+    if (node->getValue() == newValue)
     {
         return node;
     }
@@ -182,7 +182,7 @@ TreeNode *AVLBinarySearchTree::deleteItem(int valueToDelete, TreeNode *node)
             size--;
             return temp;
         }
-        // find inorder successor
+
         TreeNode *temp = getMinNode(node->getRightNode());
         node->setValue(temp->getValue());
         node->setRightTreeNode(deleteItem(temp->getValue(), temp->getRightNode()));
@@ -220,7 +220,7 @@ void AVLBinarySearchTree::deleteItem(int valueToDelete)
 
 TreeNode *AVLBinarySearchTree::search(int value)
 {
-    TreeNode *currentNode = root;
+    TreeNode* currentNode = root;
 
     while (root != nullptr && currentNode->getValue() != value)
     {
@@ -262,6 +262,29 @@ AVLBinarySearchTree* AVLBinarySearchTree::symmetricalBBST()
     return symmetricalTree;
 }
 
+bool AVLBinarySearchTree::isEqual(const AVLBinarySearchTree& other) const
+{
+    if (isEmpty() && other.isEmpty())
+        return true;
+    if (isEmpty() || other.isEmpty())
+        return false;
+    if (size != other.getSize())
+        return false;
+
+    return isEqualHelper(root, other.getRoot());
+}
+
+bool AVLBinarySearchTree::isEqualHelper(TreeNode* node1, TreeNode* node2) const
+{
+    if (node1 == nullptr && node2 == nullptr)
+        return true;
+    else if (node1 == nullptr || node2 == nullptr)
+        return false;
+    else if (node1->getValue() != node2->getValue())
+        return false;
+    return isEqualHelper(node1->getLeftNode(), node2->getLeftNode()) && isEqualHelper(node1->getRightNode(), node2->getRightNode());
+}
+
 void AVLBinarySearchTree::printPreorder()
 {
     printPreorder(root);
@@ -279,8 +302,7 @@ void AVLBinarySearchTree::printPostorder()
 
 void AVLBinarySearchTree::printPreorder(TreeNode *node)
 {
-    if (node == nullptr)
-        return;
+    if (node == nullptr) return;
 
     cout << node->getValue() << " ";
     printPreorder(node->getLeftNode());
@@ -289,8 +311,7 @@ void AVLBinarySearchTree::printPreorder(TreeNode *node)
 
 void AVLBinarySearchTree::printInorder(TreeNode *node)
 {
-    if (node == nullptr)
-        return;
+    if (node == nullptr) return;
 
     printInorder(node->getLeftNode());
     cout << node->getValue() << " ";
@@ -299,8 +320,7 @@ void AVLBinarySearchTree::printInorder(TreeNode *node)
 
 void AVLBinarySearchTree::printPostorder(TreeNode *node)
 {
-    if (node == nullptr)
-        return;
+    if (node == nullptr) return;
 
     printPostorder(node->getLeftNode());
     printPostorder(node->getRightNode());
